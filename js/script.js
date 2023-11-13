@@ -4,7 +4,8 @@ console.log(createApp);
 const app = createApp({
   data() {
     return {
-      text: "",
+      text: "Hello Vue!",
+      img: "edgar-castrejon.jpg",
     };
   },
 });
