@@ -28,6 +28,7 @@ const app = createApp({
           age: 26,
         },
       ],
+      activeIndex: 1,
     };
   },
   methods: {},

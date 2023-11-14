@@ -55,8 +55,11 @@
       <hr />
       <h2>STAMPARE UNO STUDENTE CON INDICE 1 DALL'ARRAY</h2>
       <div>
-        <h4>{{studentsArray[1].name}} {{studentsArray[1].lastName}}</h4>
-        <p>{{studentsArray[1].age}}</p>
+        <h4>
+          {{studentsArray[activeIndex].name}}
+          {{studentsArray[activeIndex].lastName}}
+        </h4>
+        <p>{{studentsArray[activeIndex].age}}</p>
       </div>
     </div>
     <script src="js/script.js"></script>
