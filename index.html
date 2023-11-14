@@ -9,9 +9,21 @@
   </head>
   <body>
     <div id="app">
-      <h1 :class="fontSize">{{ text }}</h1>
-      <img :src="img" alt="" />
+      <h1 :class="fontSize">{{ imgClass === "border" ? "BORDO" : text }}</h1>
+      <img :class="imgClass" :src="img" alt="" />
+      <hr />
       <button @click="changeFontSize">Cambia grandezza del font</button>
+      <hr />
+      <button @click="addBorder">Aggiungi o rimuovi bordo all'immagine</button>
+      <hr />
+
+      <!-- Array notation for class binding -->
+      <div
+        class="square"
+        :class="[squareRounded === true ? 'rounded' : '', suqareBlue === true ? 'blue' : 'green']"
+      ></div>
+      <button @click="makeRounded">Make rounded</button>
+      <button @click="changeColor">Change color</button>
     </div>
     <script src="js/script.js"></script>
   </body>

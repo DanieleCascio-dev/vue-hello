@@ -7,6 +7,9 @@ const app = createApp({
       text: "Hello Vue!",
       img: "edgar-castrejon.jpg",
       fontSize: " ",
+      imgClass: "",
+      squareRounded: false,
+      suqareBlue: true,
     };
   },
   methods: {
@@ -20,6 +23,18 @@ const app = createApp({
       } else {
         this.fontSize = " ";
       }
+    },
+    addBorder: function () {
+      this.imgClass =
+        this.imgClass === ""
+          ? (this.imgClass = "border")
+          : (this.imgClass = "");
+    },
+    makeRounded: function () {
+      this.squareRounded = !this.squareRounded; //Toggle
+    },
+    changeColor: function () {
+      this.suqareBlue = !this.suqareBlue;
     },
   },
 });

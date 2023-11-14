@@ -13,3 +13,24 @@ img {
 .f-big {
   font-size: 3.8rem;
 }
+
+.border {
+  border: 2px solid fuchsia;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+}
+
+.rounded {
+  border-radius: 30px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
