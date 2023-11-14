@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- v-if e v-else devono essere fratelli, adiacenti. dobbiamo inserire un espressione che restituisce un valore booleano -->
+      <h2>V-IF and V-ELSE</h2>
+      <h2 v-if="awesome">Vue is awesome</h2>
+      <p v-else>Oh no</p>
+      <hr />
+
+      <h2 v-if="myNumber > 0">Positivo</h2>
+      <h3 v-else-if="myNumber === 0">è zero</h3>
+      <p v-else="myNumber < 0">Negativo</p>
+
+      <hr />
+      <h2>V-SHOW</h2>
+      <!-- rimane in html, mette l'elemento in display none -->
+      <p v-show="awesome">Vue is awesome</p>
+      <hr />
+      <h2>V-FOR per array</h2>
+      <ul v-if="names.length > 0">
+        <!-- Ad ogni iterenazione il ciclo prende un element (che ora è una stringa) -->
+        <li v-for="(name, index,) in names">#{{index}}: {{name}}</li>
+      </ul>
+      <hr />
+      <h2>FOR IN object</h2>
+      <div>
+        <p v-for="(value, key) in students">{{key}} --> {{value}}</p>
+      </div>
+
+      <hr />
+      <h2>FOR IN number</h2>
+      <div>
+        <!-- Scorro i numri da 1 a x -->
+        <p v-for="num in 6">{{num}}</p>
+      </div>
+
+      <hr />
+      <hr />
+      <h2>FOR IN ARRAY OF OBJECTS</h2>
+      <ul>
+        <li v-for="student in studentsArray">
+          <h4>{{student.name}} {{student.lastName}}</h4>
+          <p>{{student.age}}</p>
+        </li>
+      </ul>
+
+      <hr />
+      <h2>STAMPARE UNO STUDENTE CON INDICE 1 DALL'ARRAY</h2>
+      <div>
+        <h4>{{studentsArray[1].name}} {{studentsArray[1].lastName}}</h4>
+        <p>{{studentsArray[1].age}}</p>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

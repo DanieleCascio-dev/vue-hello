@@ -22,7 +22,14 @@
         class="square"
         :class="[squareRounded === true ? 'rounded' : '', suqareBlue === true ? 'blue' : 'green']"
       ></div>
+      <!-- Object notation -->
+      <div
+        class="square"
+        :class="{'rounded': squareRounded, 'blue': suqareBlue === false, 'green': suqareBlue === true}"
+      ></div>
+
       <button @click="makeRounded">Make rounded</button>
+      <hr />
       <button @click="changeColor">Change color</button>
     </div>
     <script src="js/script.js"></script>
